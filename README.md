@@ -22,6 +22,11 @@ Steps:
 
 
 
+//After the 5th step, the composer environment got created but the quota of CPU becaume 22 out of 24. The composer takes a lot of CPU. 
+
+
+
+
 
 
 
