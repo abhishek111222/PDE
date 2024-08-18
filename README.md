@@ -1,11 +1,18 @@
 # PDE
 This repository is for the practice of Professional Data Engineering concept via Terraform
 
+gcp/
+└── dataproc-composer/
+    ├── enable_apis.sh
+    ├── main.tf
+    ├── variables.tf
+    ├── outputs.tf
 
 
 
 Steps:
 1. Install gcloud and enable APIs
+
 
 
 
