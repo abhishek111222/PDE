@@ -25,6 +25,8 @@ Steps:
 //After the 5th step, the composer environment got created but the quota of CPU becaume 22 out of 24. The composer takes a lot of CPU. 
 
 
+Remember to delete the bucket and the disk after the environment is deleted. 
+https://cloud.google.com/composer/docs/delete-environments#:~:text=To%20delete%20an%20environment%20using,of%20the%20environment's%20Redis%20queue.
 
 
 
