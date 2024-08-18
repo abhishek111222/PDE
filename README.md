@@ -29,6 +29,11 @@ Steps:
 
 
 
+ALERTING TEST
+set alerts for the quota of the CPU to the email address. 
+To test the alerts I have set the  CPU quota alerts to 70%. 
+This should send an email if the value is over 70% for 1 minute. 
+
 
 
 

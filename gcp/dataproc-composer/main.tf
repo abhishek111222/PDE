@@ -57,11 +57,9 @@ resource "google_composer_environment" "composer_env" {
 
   config {
     
-
-
     //"composer-2.9.1-airflow-2.9.1"    --> This version took 22 CPUs. If we decrease the version of both composer and airflow can we get more CPU to use later. 
     software_config {
-      image_version = "composer-2.0.11-airflow-2.1.4"   //composer-2.0.11-airflow-2.1.4
+      image_version = "composer-2.4.1-airflow-2.5.3"   
     }
 
     node_config {
