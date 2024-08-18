@@ -59,7 +59,7 @@ resource "google_composer_environment" "composer_env" {
     
     //"composer-2.9.1-airflow-2.9.1"    --> This version took 22 CPUs. If we decrease the version of both composer and airflow can we get more CPU to use later. 
     software_config {
-      image_version = "composer-2.4.1-airflow-2.5.3"   
+      image_version = "composer-2.4.1-airflow-2.5.3"   //This version is also using the same number of CPU
     }
 
     node_config {
@@ -69,6 +69,9 @@ resource "google_composer_environment" "composer_env" {
     }
   }
 }
+
+
+//When trying to create a dataproc cluster after the composer is created, it has no CPU left. 
 
 /*
 resource "google_dataproc_cluster" "dataproc_cluster" {
