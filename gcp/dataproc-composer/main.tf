@@ -15,6 +15,9 @@ resource "google_project_iam_member" "composer-sa-roles" {
         "roles/dataproc.editor",
         "roles/composer.worker",
         "roles/composer.admin",
+        "roles/composer.worker",
+        "roles/dataproc.worker",
+        //"roles/dataproc.admin",
     ])
     member = "serviceAccount:${google_service_account.composer_sa.email}"
     role = each.key
@@ -55,8 +58,10 @@ resource "google_composer_environment" "composer_env" {
   config {
     
 
+
+    //"composer-2.9.1-airflow-2.9.1"    --> This version took 22 CPUs. If we decrease the version of both composer and airflow can we get more CPU to use later. 
     software_config {
-      image_version = "composer-2.9.1-airflow-2.9.1"
+      image_version = "composer-2.0.11-airflow-2.1.4"   //composer-2.0.11-airflow-2.1.4
     }
 
     node_config {
@@ -66,3 +71,39 @@ resource "google_composer_environment" "composer_env" {
     }
   }
 }
+
+/*
+resource "google_dataproc_cluster" "dataproc_cluster" {
+    //Number of workers should be minimum of 2
+  name = "dataproc-cluster"
+  project = var.project_id
+  region = var.region
+  labels = {
+    "for" = "practice",
+    "try" = 1
+  }
+
+
+  cluster_config {
+    master_config {
+      num_instances = 1
+      machine_type = "n1-standard-1"
+    }
+
+    worker_config {
+      num_instances = 2
+      machine_type = "n1-standard-1"
+    }
+
+    software_config {
+      image_version = "1.5-debian10"
+    }
+
+    gce_cluster_config {
+      service_account = google_service_account.composer_sa.email
+      subnetwork = google_compute_subnetwork.subnet.id
+      tags = ["dataproc", "composer"]
+    }
+  }
+}
+*/
