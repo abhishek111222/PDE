@@ -1,6 +1,10 @@
 # PDE
 This repository is for the practice of Professional Data Engineering concept via Terraform
 
+
+
+
+Practice 1: Composer with dataproc cluster. 
 gcp/
 ├── dataproc-composer/
 │   ├── enable_apis.sh
@@ -39,6 +43,14 @@ This should send an email if the value is over 70% for 1 minute.
 
 
 
+
+
+Practice 2: Labels in bigQuery
+This was done to testing the labels in bigQuery. 
+You have to mention the labels in both the resouce.
+The label parameter is non-authoratative, which means that the it will only take care of the labels mentioned in the tf file.
+We have a read-only effective-labels, from which you can see all the labels to the tables, even if they are from any other resource or console. 
+The tables got created without providing any schema. 
 
 
 
