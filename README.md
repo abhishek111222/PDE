@@ -53,6 +53,15 @@ We have a read-only effective-labels, from which you can see all the labels to t
 The tables got created without providing any schema. 
 
 
+Practice 3: Using bq-connector. 
+To test the code. 
+gcloud auth login.
+export GOOGLE_APPLICATION_CREDENTIALS="SA.json"
+python3 bigquery-connector.py
+
+
+
+
 
 
 
