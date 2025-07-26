@@ -1,9 +1,6 @@
 # PDE
 This repository is for the practice of Professional Data Engineering concept via Terraform
 
-
-
-
 Practice 1: Composer with dataproc cluster. 
 gcp/
 ├── dataproc-composer/
